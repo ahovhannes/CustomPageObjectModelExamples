@@ -15,50 +15,19 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 
 class myTestCase(unittest.TestCase):
+    
     def setUp(self):        
         self.driver = webdriver.Firefox()
         self.wait = WebDriverWait(self.driver, 10)
+        #
         self.probel5 = '      '
-        #
         self.site_url = 'http://develop.bahaiteachings.org/'
-        #
-        #self.loginUrl = 'http://devshop.oneplanetops.com/customer/account/login/'
-        #self.headerLoginBtn = '//div[@class="signin"]/a[contains(text(), " Sign In")]'
-        ##
-        #self.myAccountIcon = '/html/body/main/div/header/div[2]/div/div/div[4]/div/div[1]/button/img'
-        #self.myAccountHoverMyAccount = '/html/body/main/div/header/div[2]/div/div/div[4]/div/div[1]/div/ul/li[2]/a'
-        #self.myAccountMyWishList = '###'
-        #self.myAccountHoverLogOut =  '/html/body/main/div/header/div[2]/div/div/div[4]/div/div[1]/div/ul/li[4]/a'
-        #self.myAccountHoverLogOut = '/html/body/main/div/header/div[2]/div/div/div[3]/div/div[2]/div/ul/li[4]/a'        
-        ## SignIn page
-        #self.inputEmail = '/html/body/main/div/section/div[2]/div/div[2]/div[2]/div[1]/div/div[2]/form/fieldset/div[1]/div/div/input'
-        #self.inputPassword = '/html/body/main/div/section/div[2]/div/div[2]/div[2]/div[1]/div/div[2]/form/fieldset/div[2]/div/div/input'
-        #self.submitVoiti = '/html/body/main/div/section/div[2]/div/div[2]/div[2]/div[1]/div/div[2]/form/fieldset/div[5]/button/span'
-        #self.wrongLoginPassMsg = 'The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.'
-        #self.wrongLoginPassMsgElement = '//div[contains(text(), "'+self.wrongLoginPassMsg+'")]'
-        ##
-        #self.trueUser = 'aaa@bbb.ccc'
-        #self.truePass = 'Aaaaaaaa1'
-        #self.wrongUser = 'wrongemail@bbb.ccc'
-        #self.wrongPass = 'Wrongepass1'
-        ## My Account
-        #self.myOrdersLink = '//li/a[contains(text(), "My Orders")]'
-        ## All Produkts page
-        #self.allProductsLink = '//a/span[contains(text(), "All Products")]'
-        #self.productFromAllProducts = '/html/body/main/div/section/div[3]/div/div[5]/ol/li[1]/div[1]/a'
-        ## Add product to Cart
-        #self.choosedProductColor = '/html/body/main/div/section/div[2]/div/div[3]/div[2]/div/div/div[3]/form/div[1]/div/div/div[1]/div/div[3]'
-        #self.choosedProductSize = '/html/body/main/div/section/div[2]/div/div[3]/div[2]/div/div/div[3]/form/div[1]/div/div/div[2]/div/div[2]'
-        #self.choosedProductQuantity = '//div/span[contains(text(), "+")]'
-        #self.choosedProductAddToCartBtn = '//button/span[contains(text(), "Add To Cart")]'
         #
         self.topInfoDiv = '/html/body/div[2]'
         self.gotItBtn = '//a[contains(text(), "GOT IT")]'
         self.iBtn = '/html/body/div[2]/div/div/div[1]/div[1]/a'
         self.headerSearchField = '/html/body/header/div/div/div[2]/div[1]/form/div/input'
         self.headerSearchFieldBtn = '/html/body/header/div/div/div[2]/div[1]/form/div/button'
-
-
 
     def tearDown(self):
         self.driver.close()
@@ -86,7 +55,6 @@ class myTestCase(unittest.TestCase):
         self.headers_GotIt_button("Chechink headers GOT IT button functionality for show/hide top-info section")
         self.headers_Search("CHechink functionality for header's Search")
         
-
 
     #Checks element existence by xpath
     def check_exists_by_xpath(self, xpath):
